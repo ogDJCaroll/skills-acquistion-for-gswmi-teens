@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Acquisition Program Process Flow</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.11.0/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        #flowchart {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Skill Acquisition Program Process Flow</h1>
+    <div id="flowchart" class="mermaid">
+        graph TD
+            A[Start] --> B[Program Planning]
+            B --> C[Curriculum Development]
+            B --> D[Instructor Recruitment]
+            B --> E[Resource Allocation]
+            
+            C --> F[Schedule Creation]
+            D --> F
+            E --> F
+            
+            F --> G[Participant Recruitment]
+            G --> H[Application Process]
+            H --> I{Evaluate Applications}
+            I -->|Accepted| J[Send Acceptance Notifications]
+            I -->|Rejected| K[Send Rejection Notifications]
+            
+            J --> L[Pre-Program Orientation]
+            L --> M[Distribute Learning Materials]
+            M --> N[Commence Zoom Sessions]
+            
+            N --> O[Weekly Skill Sessions]
+            O --> P{Assess Progress}
+            P -->|Satisfactory| Q[Continue to Next Module]
+            P -->|Needs Improvement| R[Provide Additional Support]
+            R --> O
+            Q --> S{Program Complete?}
+            S -->|No| O
+            S -->|Yes| T[Final Project Showcase]
+            
+            T --> U[Certificate Distribution]
+            U --> V[Program Evaluation]
+            V --> W[End]
+    </div>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>
